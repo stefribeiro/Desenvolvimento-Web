@@ -1,0 +1,102 @@
+/*Seletor por id que define o plano de fundo da página*/
+body{
+    background-color: white;
+}
+
+/*Seletor por classe que define a cor padrão do texto*/
+.default_color{
+    color: rgb(15, 20, 25);
+}
+
+/*Ajusta a imagem do perfil em formato arredondado*/
+img{
+    border-radius: 75%;
+}
+
+/*Seletor por id que define um espaçamento à esquerda de 1 cm*/
+#spacing1{
+    padding-left: 1cm;
+}
+
+/*Seletor por id que define um espaçamento à esquerda de 0.2 cm*/
+#spacing2{
+    padding-left: 0.2cm;
+}
+
+/*Seletor por id e pseudo-classe que seleciona rgb(83, 100, 113) como a cor do
+ texto para o primeiro filho*/
+#edit_color :first-child{
+    color: rgb(83, 100, 113);
+}
+
+/*********************************Navegação & Publicações*******************************/
+
+/*Seletor por id que define a cor e retira o sublinhado*/
+#nav_pub_1 a {
+    text-decoration: none;
+    color: rgb(15, 20, 25);
+}
+
+/*Seletor por id e pseudo-classe para mudar cor do background e deixar bordas arredondadas*/
+#nav_pub2 :hover{
+    background-color: rgba(15, 25, 20, 0.1) ;
+    border-radius: 8px;
+}
+
+/***********************************Estatísticas***************************************/
+
+/*Seletor por classe que define a fonte dos números*/
+.number {
+    font-weight: bold;
+}
+/*Seletor por classe que define a cor do texto*/
+.text_color {
+    color: rgb(83, 100, 113);
+}
+
+/*Seletor por id e pseudo-classe para sublinhar link*/
+#estatistica :hover {
+    text-decoration: underline;
+}
+
+/******************************************Ações****************************************/
+
+/*Seletor de filhos que seleciona a cor rgb(83, 100, 113) para o texto e retira sublinhado*/
+div > a {
+    color:rgb(83, 100, 113);
+    text-decoration: none;
+}
+
+/*Seletor por atributo e pseudo-classe hover*/
+a:hover[href*="Reply"] {
+    background-color: rgba(29, 155, 240, 0.1);
+    color: rgba(29, 155, 240, 1);
+    border-radius: 8px;
+    text-decoration: underline;
+}
+
+a:hover[href*="Share"] {
+    background-color: rgba(29, 155, 240, 0.1);
+    color: rgba(29, 155, 240, 1);
+    border-radius: 8px;
+    text-decoration: underline;
+}
+
+a:hover[href*="Retzeet"] {
+    background-color: rgba(0, 186, 124, 0.1);
+    color:  rgba(0, 186, 124, 1);
+    border-radius: 8px;
+    text-decoration: underline;
+}
+
+a:hover[href*="Like"] {
+    background-color: rgba(249, 24, 128, 0.1) ;
+    color:  rgba(249, 24, 128, 1);
+    border-radius: 8px;
+    text-decoration: underline;
+}
+
+/*Seletor por id que deixa background na cor rgba(249, 24, 128, 0.1)*/
+#tzeet :hover {
+    background-color: rgba(249, 24, 128, 0.1);
+}
