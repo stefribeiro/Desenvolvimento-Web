@@ -57,6 +57,7 @@ img{
 /*Seletor por id e pseudo-classe para sublinhar link*/
 #estatistica :hover {
     text-decoration: underline;
+    color: rgb(83, 100, 113);
 }
 
 /******************************************Ações****************************************/
