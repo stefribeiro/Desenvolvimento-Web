@@ -35,6 +35,14 @@ body{
 .make_border {
     border-radius: 40px;
 }
+
+.everyone :hover{
+    cursor: pointer;
+    background-color: rgb(29, 155, 240);
+    border-radius: 20px;
+    color: white;
+}
+s
 /*Seletor por classe para definir o background do campo de sugestao*/
 .bg_color{
     background-color: rgb(239, 243, 244);
@@ -42,7 +50,7 @@ body{
 }
 /*Seletor por id para mudar a cor do background de um paragrafo*/
 #tzeet p:hover {
-    background-color: rgba(249, 24, 128, 0.1);
+    background-color: rgba(0, 0, 0, 0.03);
 }
 
 /*********************************Navegação & Publicações*******************************/

@@ -3,6 +3,7 @@
     <head>
     <!-- Stefane Ribeiro-->
     <title>Tzeeter</title>
+    <script src="script.js"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,23 +23,88 @@
                 <div class="col-2 make_margin1">
                     <img src="imagens/tiziu.png"><br>
                     <div class="nav_pub">                   
-                        <i class="bi-house-door"></i> <a href="index.html" class="p-2 text-decoration-none link-dark d-none d-xl-inline">Home</a><br>
+                        <a href="index.html" class="p-2 text-decoration-none link-dark d-none d-xl-inline"> <i class="bi-house-door"></i> Home</a><br>
                         <br>
-                        <i class="bi-hash"></i> <a href="#" class="p-2 text-decoration-none link-dark d-none d-xl-inline">Explore</a><br>
+                        <a href="#" class="p-2 text-decoration-none link-dark d-none d-xl-inline"> <i class="bi-hash"></i> Explore</a><br>
                         <br>
-                        <i class="bi-bell"></i> <a href="#" class="p-2 text-decoration-none link-dark d-none d-xl-inline">Notifications</a><br>
+                        <a href="#" class="p-2 text-decoration-none link-dark d-none d-xl-inline"> <i class="bi-bell"></i> Notifications</a><br>
                         <br>
-                        <i class="bi-envelope"></i> <a href="#" class="p-2 text-decoration-none link-dark d-none d-xl-inline">Mensages</a><br>
+                        <a href="#" class="p-2 text-decoration-none link-dark d-none d-xl-inline"> <i class="bi-envelope"></i> Mensages</a><br>
                         <br>
-                        <i class="bi-person-fill"></i> <a href="profile.html" class="p-2 text-decoration-none link-dark d-none d-xl-inline">Profile</a><br>
+                        <a href="profile.html" class="p-2 text-decoration-none link-dark d-none d-xl-inline"> <i class="bi-person-fill"></i> Profile</a><br>
                         <br>
-                        <i class="bi-three-dots"></i> <a href="#" class="p-2 text-decoration-none link-dark d-none d-xl-inline">More</a><br>
+                        <a href="#" class="p-2 text-decoration-none link-dark d-none d-xl-inline"> <i class="bi-three-dots"></i> More</a><br>
                         <br>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary search-button d-md-none d-lg-block d-none d-sm-block d-xl-block" type="submit" style="border-radius: 20px;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Tzeet
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!--inicio-->
+                                <div class="d-flex align-items-start flex-row mb-2">
+                                    <div class="p-2">
+                                        <img src="imagens/perfil1.jpeg" class="rounded-circle" width="64px">
+                                    </div>
+            
+                                    <div class="p-2">
+                                        <div class="d-inline-flex align-items-start flex-column mb-3 ">
+                                            <div class="p-2">
+                                                <form>
+                                                    <!-- tzeet input -->
+                                                    <div class="form-check-inline">
+                                                        <textarea cols="100%" class="form-control d-xl-block" id="areaDeEntrada" onkeyup="redimensionar(), contar()" placeholder="O que você está pensando" style="width: 100%"></textarea>
+                                                    </div>
+                                                </form>
+                                            
+                                            </div>
+                                            
+                                            <div class="p-2 everyone">
+                                                <a href="#" class="p-2 text-decoration-none d-none d-xl-inline fw-bold"> <i class="bi-globe link-primary"></i> Everyone can reply</a>
+                                            </div>
+            
+                                            <div class="p-2">
+                                                <div class="d-flex flex-row mb-2">
+                                                    <div class="p-2 everyone">
+                                                        <a href="#"> <i class="bi-image link-dark"></i></a>
+                                                        <a href="#"> <i class="bi-filetype-gif link-dark"></i></a>
+                                                        <a href="#"> <i class="bi-emoji-smile link-dark"></i></a>
+                                                        <a href="#"> <i class="bi-bar-chart link-dark"></i></a>
+                                                        <a href="#"> <i class="bi-calendar4-event link-dark"></i></a>
+                                                        <a href="#"> <i class="bi-geo-alt link-dark"></i></a>
+                                                    </div>
+            
+                                                    <div class="p-2">
+                                                        <div class="d-flex flex-row mb-3">
+                                                            <item id="statusEnvio"> </item>
+                                                            <item> | </item>
+                                                            <item class="everyone"><a href="#"> <i class="bi-plus-circle link-dark m-2"></i></a></item>
+                                                            <item> 
+                                                                <button class="btn btn-primary ms-5 make_border" id="envio" type="submit" disabled>Enviar</button>
+                                                            </item>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
                     </div>
 
                     <div>
-                        <button class="btn btn-primary search-button d-md-none d-lg-block d-none d-sm-block d-xl-block" type="submit" style="border-radius: 20px;">Tzeet</button>
-
                         <button class="btn btn-primary search-button d-lg-block d-xl-none d-xl-block" style="border-radius:75%" type="submit"><i class="bi bi-chat"></i></button>
                     </div>
                 </div>
@@ -71,15 +137,15 @@
                             <a class="p-2 m-4 flex-fill text-decoration-none fw-bold link-secondary" href="#">Media</a> 
                             <a class="p-2 m-4 flex-fill text-decoration-none fw-bold link-secondary" href="#">Links</a><br>
                     </div>
-                    <div>
+                    <div id="tzeet">
                         <br>
                         <span class="default_color">Amanda Albuquerque de Souza<span class="text_color"> @amandaalbuquerque May 22, 2022</span><br>
                         <p class="default_color">"At the same moment that we receive stones in our path, flowers are being planted further away. Those who give up don't see them."</p>
                     </div>
                     <div>
-                        <span class="m-4 p-2 flex-fill"> <i class="bi-chat acao1"></i> <a class="acao4 text-decoration-none text_color" href="Reply">200</a></span>
-                        <span class="m-4 p-2 flex-fill"> <i class="bi-arrow-repeat acao1"></i> <a href="Share" class="acao4 text-decoration-none text_color">100</a></span>
-                        <span class="m-4 p-2 flex-fill"> <i class="bi-heart acao2"></i> <a href="Like" class="acao5 text-decoration-none text_color">120</a></span>
+                        <span class="m-4 p-2 flex-fill"> <a class="acao4 text-decoration-none text_color" href="Reply"> <i class="bi-chat acao1"></i> 200</a></span>
+                        <span class="m-4 p-2 flex-fill"> <a href="Share" class="acao4 text-decoration-none text_color"> <i class="bi-arrow-repeat acao1"></i> 100</a></span>
+                        <span class="m-4 p-2 flex-fill"> <a href="Like" class="acao5 text-decoration-none text_color"> <i class="bi-heart acao2"></i> 120</a></span>
                         <span class="m-4 p-2 flex-fill acao3"> <i class="bi-upload"></i></span>
                     </div>
                     <div>
@@ -88,9 +154,9 @@
                         <p class="default_color">Good night, people!</p>
                     </div>
                     <div>
-                        <span class="m-4 p-2 flex-fill"> <i class="bi-chat acao1"></i> <a class="acao4 text-decoration-none text_color" href="Reply">129</a></span>
-                        <span class="m-4 p-2 flex-fill"> <i class="bi-arrow-repeat acao1"></i> <a href="Share" class="acao4 text-decoration-none text_color">98</a></span>
-                        <span class="m-4 p-2 flex-fill"> <i class="bi-heart acao2"></i> <a href="Like" class="acao5 text-decoration-none text_color">307</a></span>
+                        <span class="m-4 p-2 flex-fill"> <a class="acao4 text-decoration-none text_color" href="Reply"> <i class="bi-chat acao1"></i> 129</a></span>
+                        <span class="m-4 p-2 flex-fill"> <a href="Share" class="acao4 text-decoration-none text_color"> <i class="bi-arrow-repeat acao1"></i> 98</a></span>
+                        <span class="m-4 p-2 flex-fill"> <a href="Like" class="acao5 text-decoration-none text_color"> <i class="bi-heart acao2"></i> 307</a></span>
                         <span class="m-4 p-2 flex-fill acao3"> <i class="bi-upload"></i></span>
                     </div>
                 </div>
